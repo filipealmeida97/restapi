@@ -15,8 +15,18 @@ class BaseController {
         return $query;
     }
 
-    protected function sendOutput($name, $arguments){
+    //Retornar os dados da API
+    protected function sendOutput($data, $httpHeaders = array()){
+        header_remove('Set-Cookie');
         
+        if(is_array($httpHeaders) && count($httpHeaders)){
+            foreach ($httpHeaders as $httpHeader) {
+                header($httpHeader);
+            }
+        }
+
+        echo $data;
+        exit;
     }
 
 }
