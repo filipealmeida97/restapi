@@ -19,15 +19,19 @@ class UserController extends BaseController{
                 if(isset($stringParamsArray['limit']) && $stringParamsArray['limit']) {
                     $intLimit = $stringParamsArray['limit'];
                 }
-
+                
+                //Chama o método que recuperar os usuários na classe UserModel
                 $usersArray = $userModel->getUsers($intLimit);
-                //JSON COM OS USUÁRIOS
+                //Retorna o JSON COM OS USUÁRIOS
                 $responseData = json_encode($usersArray);
             } catch (Error $e) {
                 $erroDescription = $e->getMessage(). 'Something went wrong! Please contact administrators';
                 $errorHeader  = 'HTTP/1.1 500 Internal Server Error';
             }
         }else{
+            // $dados = file_get_contents("php://input");
+            // echo $dados;
+            // exit;
             $erroDescription = 'Method not supported';
             $errorHeader = 'HTTP/1.1 422 Unprocessable Entity';
         }

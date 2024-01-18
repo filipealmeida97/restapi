@@ -6,8 +6,8 @@ $uri = explode('/', $uri);
 
 //      [0]         [1]  [2] [3]  [4] ........
 //localhost:8080/restapi/v1/user/list?limit=1
-print_r($uri);
-exit;
+// print_r($uri);
+// exit;
 
 if((isset($uri[1]) && $uri[1] != "restapi") || (isset($uri[2]) && $uri[2] != "v1")){
     header("HTTP/1.1 404 Not Found");
