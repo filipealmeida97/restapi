@@ -9,4 +9,10 @@ class UserModel extends Database{
         
     }
 
+    public function setUsers($data) {
+
+        return $this->insert($data);
+    
+    }
+
 }
