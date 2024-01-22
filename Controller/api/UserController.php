@@ -29,11 +29,10 @@ class UserController extends BaseController{
                 $errorHeader  = 'HTTP/1.1 500 Internal Server Error';
             }
         }else{
-            // $dados = file_get_contents("php://input");
-            // echo $dados;
-            // exit;
+
             $erroDescription = 'Method not supported';
             $errorHeader = 'HTTP/1.1 422 Unprocessable Entity';
+        
         }
 
         //send output
@@ -77,11 +76,10 @@ class UserController extends BaseController{
                 $errorHeader  = 'HTTP/1.1 500 Internal Server Error';
             }
         }else{
-            // $dados = file_get_contents("php://input");
-            // echo $dados;
-            // exit;
+
             $erroDescription = 'Method not supported';
             $errorHeader = 'HTTP/1.1 422 Unprocessable Entity';
+        
         }
 
         //send output
