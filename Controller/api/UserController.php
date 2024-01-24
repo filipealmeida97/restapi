@@ -61,10 +61,15 @@ class UserController extends BaseController{
                 $userModel = new UserModel();
 
                 if($dados = file_get_contents("php://input")){
-
                     //Chama o método que insere os usuários na classe UserModel e grava na variável
                     $responseData = $userModel->setUsers($dados);
+                    
+                    if(!$responseData){
 
+                        $erroDescription = 'Empty or conflicting content';
+                        $errorHeader = 'HTTP/1.1 400 Bad Request';
+
+                    }
                 }else{
                     $this->sendOutput(json_encode(array('error' => "Data not found")),
                     array('Content-Type: application/json', 'HTTP/1.1 422 Unprocessable Entity')
