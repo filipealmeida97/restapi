@@ -7,7 +7,7 @@
 </head>
 <body>
 <div class="text-center">
-    <h1 class="display-3">ERROR 418: I'm a teapot<h1/>
+    <h1 class="display-3">ERROR 418: I'm a teapot.<h1/>
     <img src="https://s6.imgcdn.dev/fOfNq.png" alt="fOfNq.png" border="0" width="30%" heigth="30%">
 
 </div>
