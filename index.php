@@ -4,6 +4,9 @@ require __DIR__ . "/Config/config.php";
 $uri = parse_url($_SERVER['REQUEST_URI'], PHP_URL_PATH);
 $uri = explode('/', $uri);
 
+// iniciar o servidor interno php
+// C:\xampp\php> ./php -S localhost:8000 -t ../htdocs/restapi
+
 //      [0]         [1]  [2] [3]  [4] ........
 //localhost:8080/restapi/v1/user/list?limit=1
 // print_r($uri);
